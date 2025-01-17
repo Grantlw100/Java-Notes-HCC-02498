@@ -1,7 +1,7 @@
 # Java Programming Notes 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
-This repository encapsulates the collection of notes and projects from Professor Fiskey's 02948 HCC Java Programming Course. This public repository may include MarkDown files with widely used sentences and copyrighted material due to my personal note taking tactics. 
+This repository encapsulates the collection of notes and projects from Professor Fiskey's 02498 HCC Java Programming Course. This public repository may include MarkDown files with widely used sentences and copyrighted material due to my personal note taking tactics. 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
