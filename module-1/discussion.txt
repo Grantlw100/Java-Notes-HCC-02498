@@ -1,0 +1,75 @@
+popular applications
+
+minecraft 
+
+spotify
+
+signal 
+
+twitter 
+
+cash app
+
+- standard programming language for android development
+
+- simple to program and learn 
+
+- OOP with well defined frameworks
+
+- 20 years of development and large community support
+    - 1
+
+- free 
+
+- platform independent
+    - 2
+
+
+Stuti Dhruv
+18 July, 2024
+https://www.aalpha.net/blog/why-developers-prefer-java-programming-over-other-languages/#:~:text=2)%20Java%20is%20an%20Object,framework%20particular%2C%20adaptable%20and%20extensible.
+
+Dhruv, S. (2024, July 18). Why developers prefer java programming over other languages?. Aalpha. https://www.aalpha.net/blog/why-developers-prefer-java-programming-over-other-languages/#:~:text=2)%20Java%20is%20an%20Object,framework%20particular%2C%20adaptable%20and%20extensible. 
+
+
+Java today is the foundation for most networked applications and is considered to be useful for scripting, web-based content, enterprise software, games, and mobile applications.
+
+Ronald Davis
+January 16, 2022
+https://www.invensis.net/blog/benefits-of-java-over-other-programming-languages
+
+1.     - Java is a mature language, therefore more stable and predictable.
+ The Java Class Library enables cross-platform development.
+
+2. Unlike C and C++, Java programs are compiled independently of the platform in bytecode language which allows the same program to run on any machine that has a JVM installed.
+
+
+Cameron McKenzie
+06 Mar, 2023
+https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Java-Advantages-Benefits-Fast-Performance-Simple-Open-Typed-Features-Streams
+
+As the Java community drives forward with major changes to the API, the stewards of the language have always prioritized backwards compatibility and non-breaking feature additions.
+
+Even with the introduction of default interfaces and lambda expressions as functional programming, the Java platform has maintained backwards compatibility. Code written in earlier versions can run in an updated environment without even the need for recompilation.
+
+In 2023, the advantages of Java are many, as the JDK and the JVM remain more relevant than ever.
+
+
+TIOBE Index
+https://www.tiobe.com/tiobe-index/java/
+
+- highest position since 2001 #1 in Apr 2020
+
+- lowest position #4 in august 2024 
+
+- language of the year 2005, 2015 
+
+Corrected for republishing: 
+
+Since Java's creation in 1995, 30 years ago, it has become one of the world's most widely used programming languages. Java, as a programming language, has held a top-ten position on the Tiobe Index since 2001 ("Tiobe Index," 2025). Java's position on the Tiobe Index fluctuates based on global programming trends. Java held Tiobe's number one spot in April 2020, reached its lowest position of #4 in August 2024, and was named the language of the year in both 2005 and 2015.
+
+One of the primary reasons Java has maintained its top-ten spot on the Tiobe Index is its simplicity and ease of access. Java is a free, well-supported, platform-independent, object-oriented programming language. In the article "Why Developers Prefer Java Programming Over Other Languages?" by Dhruv, S. (2024), the author highlights various reasons why Java has retained its relevance over other programming languages. Originally designed based on the C++ language, Java aimed to simplify the process of writing programs. As the language has grown older it has become more complex but its core principles of simplicity and accessibility remain intact.
+
+As Java evolves, older Java projects continue to function without hick-ups, thanks to its backward compatibility (McKenzie, 2023). This is a significant advantage for companies that have relied on Java for years. Java is designed to function independently, without the need for recompilation or reconfiguration. When Java programs are compiled, they are translated into bytecode, enabling any machine with a JVM installed to execute the program.
+
+Among the many factors that contribute to the popularity of programming languages, Java incorporates traits common to other successful languages while building on them in ways that ensure its continued relevance. For back-end, front-end, and mobile development, Java is a mature language—therefore more stable and predictable (Davis, 2022). With a large community, a broad suite of technology built on Java, and a substantial number of developers familiar with the language, Java is likely to remain a top-ten programming language for years to come.
