@@ -1,13 +1,19 @@
 # Java Programming
 ## Content
-- ### [**Java Basics**](#java-basics)
-    - [Hello World](#hello-world)
-    - [Endings a line in Java](#endings-a-line-in-java)
-    - [Print Statements](#print-statements)
-    - [Comments](#comments)
-    - [Methods in Java](#methods-in-java)
-- ### [**Java Variables**](#java-variables)
-
+### [**Java Basics**](#java-basics)
+- [Hello World](#hello-world)
+- [Print Statements](#print-statements)
+- [Comments](#comments)
+- [Methods in Java](#methods-in-java)
+### [**Data Types and Syntax**](#data-types-and-syntax)
+- [Class](#class)
+- [Method](#method)
+- [Declaring Variables in Java](#declaring-variables-in-java)
+- [Class Syntax](#class-syntax)
+- [Statement Terminators](#statement-terminators)
+### [**Java Variables**](#java-variables)
+- [Variable Notation](#variable-notation)
+   
 ## Java Basics 
 
 Java was developed by Sun Microsystems in 1995. It is a high-level programming language that is platform-independent, meaning that it can run on any operating system that has a Java Virtual Machine (JVM). Java is used to develop a wide variety of applications, from web applications to mobile applications to enterprise applications.
@@ -32,7 +38,6 @@ java HelloWorld
 //This will run the recently compiled Java program
 //Running compiled Java programs does not require the .class extension
 ```
-
 ### Hello World 
 
 The first line of code any developer will see when learning a new programming language is the "Hello, World!" program. This program is used to demonstrate the basic syntax of the language. Here is the "Hello, World!" program in Java:
@@ -53,12 +58,6 @@ While Java programs are used on different platforms they are written using a .ja
 - Methods are used to define the behavior of a class. The `main` method is the entry point of a Java program.
     - similar to classes, methods also have a domain that is defined by the curly braces `{}`
 
-### Endings a line in Java
-While it is incredibly annoying, ensure that lines are ended with a semi-colon or the program will not compile.
-**Example:**
-```Java
-System.out.println("Hello World!");
-```
 
 ### Print Statements
 
@@ -107,4 +106,739 @@ A method  is a set of code that is referred to by name and can be called (invoke
 
 **Every Java program needs a method called MAIN** which is the entry point for that file.java. The main method is the first method that is called when a Java program is run. 
 
+**Example:**
+```Java
+public static void main(String[] args) {
+    // code to be executed
+}
+```
+
+Methods have a **Signature** **which is the method name and the parameters that the method takes.** The signature of a method is used to identify the method and distinguish it from other methods in the program.
+
+## Import statements
+Import statements are used to import classes from other packages. The `import` keyword is used to import classes from other packages. 
+
+There are **two types of import statements** in Java:
+- **Implicit** or **Single-type import**: This imports a single class from a package.
+- **Explicit** 0r **On-demand import**: This imports all the classes from a package.
+The `java.util` package contains the Scanner class, which is used to get user input in Java.
+
+**Example:**
+```Java
+import java.util.Scanner;
+```
+
+## Data Types and Syntax
+
+### Class
+A class in Java is a method that defines the structure of an object. It is a blueprint that defines the properties and behaviors of an object. A class can contain fields (variables) and methods (functions).
+
+Classes should begin with a capital letter and follow PascalCase.
+
+### Method
+A method is a block of code that performs a specific task. It is a set of code that is referred to by name and can be called (invoked) at any point in a program simply by utilizing the method's name. Methods are used to perform certain actions, and they are also known as functions.
+
+Methods should begin with a lowercase letter and follow camelCase.
+
+
+### Primitive DataTypes
+
+Primitive Data types that store simple values 
+
+**int** - stores positive or negative whole numbers (without decimals) as well as 0  
+- allows values between -2,147,483,648 and 2,147,483,647  
+
+**float** - stores floating-point numbers  
+
+**double** - stores decimal numbers, very large numbers, very small numbers, and is more precise than float
+- the maximum value is 1.7976931348623157 * E308 which is 17 followed by 307 zeros
+- the minimum value is 4.9 * E-324 which is 4.9 led by 324 zeros
+
+**char** - stores single characters  
+- single quotes are used to define a char
+- can hold a letter, space, number, or special character
+
+**boolean** - stores true or false values  
+
+**byte** - stores 8-bit integers  
+    - used to save memory in large arrays when memory savings are crucial   
+
+**short** - stores 16-bit integers  
+    - double the size of a byte   
+
+**long** - stores 64-bit integers  
+
+### Reference Types / Derived Types / Objects 
+Reference types are created by the developer and are used to reference data. 
+
+
+**Strings** - objects that hold sequences of characters.
+- Strings can be created by using string literals
+    - String literals are created by enclosing the text in double quotes.
+    - Example: `String myString = "Hello World!";`
+-  or by calling the string class
+    - alternatively you can create a string object by calling the string class
+    - Example: `String myString = new String("Hello World!");`
+
+**arrays**  -
+
+**classes** -
+
+**interfaces** -
+
+### Escape Sequences
+Escape sequences are used to represent characters that are difficult or impossible to type directly. They are used to perform various tasks such as adding a new line, tab, or double quote to a string.
+
+An example of an escape sequence is adding double quotes to a string without the compiler perceiving those double quotes as the end of the string.
+- Example: `String myString = "Hello \"World\"!";`  
+    - prints `Hello "World"!`
+
+Certain characters need to be escaped to ensure they are properly formatted in objects like strings. The backslash `\` is used to escape characters in Java and, whenever used in a string or some other object may need to be escaped itself which looks like `\\`.
+
+The **Newline** character `\n` is used to create a new line in a string. When it is used in a string, it will create a new line in the output.
+- Example: `String myString = "Hello\nWorld!";`  
+    - prints 
+    ```
+    Hello
+    World!
+    ```
+
+### Statement Terminators
+While it is incredibly annoying, ensure that lines are ended with a semi-colon or the program will not compile.  
+- **Example:**
+```Java
+System.out.println("Hello World!");
+```
+
+### Reserved words or Keywords
+
+Reserved words are words that have a special meaning in Java and cannot be used as identifiers (variable names, class names, method names, etc.). Some examples of reserved words in Java are `public`, `class`, `static`, `void`, `int`, `String`, `if`, `else`, `while`, `for`, `return`, `break`, `continue`, `switch`, `case`, `default`, `try`, `catch`, `finally`, `throw`, `throws`, `new`, `this`, `super`, `true`, `false`, `null`, `instanceof`, `import`, `package`, `interface`, `extends`, `implements`, `abstract`, `final`, `private`, `protected`, `public`, `static`, `synchronized`, `volatile`, `transient`, `native`, `strictfp`, `class`, `enum`, `interface`, `byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`, `void`.
+
 ## Java Variables
+
+### Variable Notation 
+
+In Java programming, a multitude of variable notation is used for the purpose of readability and consistency.
+
+- **Camel Casing** is the practice of writing compound words or phrases where the first word is lower case and each subsequent word begins with a capital letter.
+    - Example: `myVariableName`
+
+- **Pascal Casing** is the practice of writing compound words or phrases where each word begins with a capital letter.
+    - Example: `MyVariableName`
+
+- **Hungarian Notation** is the practice of writing compound words where the data type leads the variable followed by the variable name.
+    - Example: `intMyVariableName`
+
+- **Snake Casing** is the practice of writing compound words or phrases where each word is separated by an underscore.
+    - Example: `my_variable_name`
+
+### Identifiers 
+
+**Identifiers** are used to name classes, methods, variables, and other entities in a Java program. Identifiers must follow certain rules and conventions.
+
+- Identifiers must begin with a letter, underscore `_`, or dollar sign `$`.
+- Identifiers can contain letters, digits, underscores, and dollar signs.
+- Identifiers are case-sensitive.
+- Identifiers cannot be a reserved word.
+
+**Example:**
+```Java
+int myVariable = 5;
+String myString = "Hello, World!";
+```
+
+### Declaring Variables in Java
+
+Variables are declared with there data type followed by the variable name. 
+
+A variable without a value is called an **uninitialized variable**.
+
+**Example:**
+```Java
+//Int represents the integer value type
+int age;
+```
+
+A variable that uses the assignment operator `=` is called an **initialized variable**.
+
+**Example:**
+```Java
+// assign the value 25 to the variable age
+int age = 25;
+```
+
+**Instance variables** are declared within a class but outside of any method, constructor, or block. They are initialized when the class is instantiated.
+    - instance variable have class level scope
+    - they are created when an object of the class is instantiated and destroyed when the object is destroyed.
+**Example:**
+```Java
+class person {
+    // instance variable
+    String name;
+    int age;
+}
+```
+
+**Class variables** are declared with the `static` keyword. They are initialized when the class is loaded.
+    - class variables have class level scope
+    - dont have to create an instance of the class to access the class variable
+**Example** 
+```Java
+class person {
+    // class variable
+    static String name;
+    static int age;
+}
+```
+
+### Declaring multiple variables within the same line
+
+Multiple variables can be declared on the same line by separating them with a comma.
+
+**Example:**
+```Java
+int x, y, z;
+
+string firstName, lastName;
+```
+
+Alternatively multiple variables can be declared on the same line and initialized with the same value by separating them with a semicolon.
+
+**Example:**
+```Java
+int x = 5; y = 10; z = 15;
+```
+
+### Constants in Java
+
+Constants are variables whose values cannot be changed once they are assigned. In Java, constants are declared with the `final` keyword.
+- declared using the final keyword.
+- constants are written in uppercase snake casing.
+
+**Example:**
+```Java
+final int MAX_VALUE = 100;
+final string COMPANY_NAME = "Tech Elevator";
+```
+
+### Literals
+A literal is a constant value that is used in a program. In Java, there are different types of literals, such as integer literals, floating-point literals, character literals, string literals, and boolean literals.
+
+Literals are used to represent fixed values in a program. They are used to assign values to variables, pass values as arguments to methods, and perform other operations.
+
+```Java
+int x = 5; // 5 is an integer literal
+double y = 5.0; // 5.0 is a floating-point literal
+char z = 'A'; // 'A' is a character literal
+String s = "Hello"; // "Hello" is a string literal
+```
+
+| Literal | Description | Example |
+| --- | --- | --- |
+| Integer Literal | A whole number without a decimal point | 5 |
+| Floating-Point Literal | A number with a decimal point | 5.0 |
+| Character Literal | A single character enclosed in single quotes | 'A' |
+| String Literal | A sequence of characters enclosed in double quotes | "Hello" |
+| Boolean Literal | A value that is either true or false | true |
+| Null Literal | A value that represents the absence of a value | null |
+
+When creating literals, it is important to use letters trailing behind the number to indicate the data type of the literal. This is important because Java will default to an integer data type if a letter is not used to indicate the data type of the literal.
+
+**Example:**
+```Java
+// L indicates a long literal
+long x = 5L;
+
+// F indicates a float literal
+float y = 5.0F;
+
+// D indicates a double literal
+double z = 5.0D;
+```
+
+
+## Manipulating Variables
+The data type of a variable plays some role in determining what mathematical operations can be performed on it.
+
+### Arithmetic operators
+Arithmetic operators are used to perform mathematical operations on variables.
+
+| Operator | Description | Example| Returns |
+| --- | --- | --- | --- |
+| + | Addition | 5 + 3 | 8 |
+| - | Subtraction | 5 - 3 | 2 |
+| * | Multiplication | 5 * 3 | 15 |
+| / | Division | 5 / 3 | 1 |
+| % | Modulus | 5 % 3 | 2 |
+
+### Compund Assignment Operators
+Compound assignment operators are used to perform an arithmetic operation and assign the result to a variable in a single step.
+
+| Operator | Description | Example | Equivalent |
+| --- | --- | --- | --- |
+| += | Addition assignment | x += 3 | x = x + 3 |
+| -= | Subtraction assignment | x -= 3 | x = x - 3 |
+| *= | Multiplication assignment | x *= 3 | x = x * 3 |
+| /= | Division assignment | x /= 3 | x = x / 3 |
+| %= | Modulus assignment | x %= 3 | x = x % 3 |
+
+### Increment and Decrement Operators
+| Operator | Description | Example | Returns |
+| --- | --- | --- | --- |
+| ++x | pre-Increment | **var | add 1 && use the new value in the statement |
+| --x | pre-Decrement | --var | minus 1 && use the new value in the statement |
+| x++ | post-Increment | var++ | add 1 but use the old value in the statement |
+| x-- | post-Decrement | var-- | minus 1 but use the new value in the statement |
+
+### Math in Java
+Arithmetic performed on different data types results in different values as resultants. 
+
+**Example:**
+```Java
+// integer division results in truncated answers 
+5 / 3 = 1
+
+// double division results in a decimal answer
+5.0 / 3.0 = 1.6666666666666667
+
+// modulus returns the remainder of a division
+5 % 3 = 2
+```
+
+Certain data types should be used for specific operations. For example, using the floating-point data type for division will result in a more accurate answer than using the integer data type but even when simple addition is performed on floats, the answer may still be inaccurate.  
+This is due to the way that floating-point numbers are stored in memory.  
+**Example:**
+```Java
+// floating-point numbers are not always accurate
+System.out.Println(1.0 - 0.1 - 0.1 - 0.1 - 0.1 - 0.1)
+// prints 0.5000000000000001
+
+System.out.Println(1.0 - 0.9)
+// prints 0.09999999999999998
+```
+
+### Math class for Arithmetic Operations
+The `Math` class in Java provides methods for performing mathematical operations. The `Math` class is part of the `java.lang` package, which is automatically imported into every Java program.
+
+| Method | Description | Example | Returns |
+| --- | --- | --- | --- |
+| abs() | Returns the absolute value of a number | Math.abs(-5) | 5 |
+| ceil() | Returns the smallest integer that is greater than or equal to the argument | Math.ceil(5.1) | 6.0 |
+| floor() | Returns the largest integer that is less than or equal to the argument | Math.floor(5.9) | 5.0 |
+| max() | Returns the larger of two numbers | Math.max(5, 3) | 5 |
+| min() | Returns the smaller of two numbers | Math.min(5, 3) | 3 |
+| pow() | Returns the value of the first argument raised to the power of the second argument | Math.pow(2, 3) | 8.0 |
+| random() | Returns a random number between 0.0 and 1.0 | Math.random() | 0.123456789 |
+| round() | Returns the closest integer to the argument | Math.round(5.5) | 6 |
+| sqrt() | Returns the square root of the argument | Math.sqrt(25) | 5.0 |
+| toDegrees() | Converts an angle from radians to degrees | Math.toDegrees(Math.PI) | 180.0 |
+| toRadians() | Converts an angle from degrees to radians | Math.toRadians(180.0) | 3.141592653589793 |
+
+Multiple math class methods can be used in conjunction with one another to perform complex operations.
+**Example:**
+```Java
+// Math class methods
+System.out.println(Math.pow(2,Math.abs(-5))); // 5
+//prints 32.0 or 2 to the power of 5
+```
+
+### Accuracy of Floating-Point Numbers
+Floating-point numbers are not always accurate due to the way they are stored in memory. This can lead to inaccuracies when performing arithmetic operations on floating-point numbers. 
+
+When in doubt, it is best to used the `BigDecimal` class to perform arithmetic operations on floating-point numbers. The `BigDecimal` class is part of the `java.math` package and is used to perform arbitrary-precision arithmetic.
+
+OR just use double data types for most operations and only use the `BigDecimal` class when precision is crucial.
+
+Integers can also be used to perform arithmetic operations on floating-point numbers where the decimal place can be moved to the right by multiplying the number by a power of 10.
+
+### Scientific Notation
+Scientific notation is a way of expressing very large or very small numbers in a more compact form. 
+
+To use scientific notation in Java, the letter `E` is used to indicate the power of 10 by which the number is multiplied.
+
+**Example:**
+```Java
+double x = 1.234E3; // 1234.0
+double y = 1.234E-3; // 0.001234
+```
+
+### Data Conversion
+
+Data conversion is the process of converting data from one data type to another. In Java, data conversion can be done implicitly or explicitly.
+
+Java will automatically convert data from one data type to another if the operation falls into one of these rules and in this order:
+1. If one of the operands is a double, the other operand will be converted to a double.
+2. If one of the operands is a float, the other operand will be converted to a float.
+3. If one of the operands is a long, the other operand will be converted to a long.
+4. If one of the operands is an int, the other operand will be converted to an int.
+
+This is referred to as **implicit data conversion** meaning there is no need to explicitly (manually) convert the data type.
+
+**Explicit Casting** is the process of manually converting data from one data type to another. This is done by placing the desired data type in parentheses before the value to be converted.
+
+**Example:**
+```Java
+double x = 1.234;
+int y = (int) x; 
+// Explicit casting HAS to be used to inform Java the truncation of the decimal and trailing values is intentional
+```
+
+### Augmented Expressions
+Augmented expressions are a shorthand way of performing arithmetic operations and assigning the result to a variable.
+
+**Example:**
+```Java
+int x = 5;
+x += 3; // x is now 8
+```
+
+An augmented expression of the form `x += y` is equivalent to `x = x + y`. The same applies to other arithmetic operators.
+
+## Classes 
+Classes are templates for creating objects in Java. They define the properties and behaviors of objects. A class is a blueprint for creating objects, and objects are instances of classes.
+
+There are built-in , predefined classes in Java that are part of the Java API (Application Programming Interface). These classes are part of the `java.lang` package, which is automatically imported into every Java program.
+
+There also means of creating custom classes in Java which are used to define the structure of objects that are specific to a program.
+
+### State and Behavior
+
+Classes have two main components: **state** and **behavior**.
+
+- **State** is represented by fields (variables) that store the data of an object. The state of an object is defined by the values of its fields. 
+
+- **Behavior** is represented by methods (functions) that define the actions that an object can perform. The behavior of an object is defined by the methods that it can execute.
+
+**Example:**
+```Java
+public class Car {
+    // state
+    String color;
+    int mpg;
+    boolean isElectric;
+
+    // behavior
+    public void drive() {
+        System.out.println("The car is driving.");
+    }
+}
+```
+
+### Class Syntax
+
+```Java
+public class ClassName {
+  // class body
+
+    // fields (variables)
+    int x;
+    String y;
+
+    // constructor
+    public ClassName(int x, String y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // methods
+    public void printValues() {
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
+    }
+
+
+}
+```
+
+### Head of a class
+The **head of a class** is defined by the class keyword followed by the class name and the class body is defined by the curly braces `{}`.  
+The head includes features like the class name, access modifiers, and the class keyword.
+- **Public** is an access modifier that specifies that the class is accessible from any other class.
+
+- **Static** means the variable or function is shared between all instances of that class as it belongs to the class and not to any specific instance of the class.
+
+- **Void** is a keyword that is used to define a method that does not return a value.
+
+**Example:**
+```java
+public class ClassName {
+  // class body
+}
+```
+
+### **Constructor** 
+is a special method that is used to initialize objects. It is called when an object of a class is created. 
+- The constructor ***constructs*** a new instance of the class.
+- The name of the constructor function must be the same as the class name.
+- classes are defined as public so that they can be accessed from other classes.
+
+**Example:**
+```Java
+public ClassName(int x, String y) {
+    this.x = x;
+    this.y = y;
+}
+```
+
+Classes can have multiple constructors and are differentiated by their signature. The compiler will decide which constructor function to use based on the arguments passed to the Classes object. 
+
+**Example:**
+```Java
+public class Car { 
+  public String color; 
+  public int mpg; 
+  public boolean isElectric; 
+
+  // constructor 1 
+  public Car(String carColor, int milesPerGallon) { 
+    color = carColor; 
+    mpg = milesPerGallon; 
+  } 
+
+  // constructor 2 
+  public Car(boolean electricCar, int milesPerGallon) { 
+    isElectric = electricCar; 
+    mpg = milesPerGallon; 
+  } 
+}
+```
+
+**Example Usage**
+```Java
+// uses constructor 1
+Car myCar = new Car("red", 25);
+
+// uses constructor 2
+Car myElectricCar = new Car(true, 100);
+```
+
+If ***no constructor is defined*** in a class, Java will automatically create a default constructor that takes no arguments and applies default values to the instance fields.
+
+**Example:**
+```Java
+public class ClassName {
+    int x;
+    String y;
+}
+```
+
+**Example Usage**
+```Java
+ClassName myObject = new ClassName();
+
+System.out.println(myObject.x); // 0
+System.out.println(myObject.y); // null
+```
+
+### **Instance Fields** 
+are variables that are declared within a class but outside of any method, constructor, or block. They are initialized when the class is instantiated.
+- Instance Variables represent the key value pairs of a class.
+
+Instance Fields can be set in three different ways: 
+1. IF the instance fields are public they can be set directly.
+
+2. IF the instance fields are private they can be set using the constructor method.
+
+3. IF the instance fields are private they can be set using setter methods.
+
+**Example:**
+```Java
+public class ClassName {
+    // fields (variables)
+    int x;
+    String y;
+}
+```
+
+Accessing these values from an instantiated object is done by using the object name followed by a period and the field name which is known as the dot operator.
+
+**Example:**
+```Java
+ClassName myObject = new ClassName();
+myObject.x = 5;
+System.out.println(myObject.x); // 5
+```
+
+### **Parameters && Argumetns**
+placeholders that are replaced by actual values when the method is called. Parameters are used to pass values to methods.  
+
+There are two types of parameters in Java: 
+1. **formal parameters** - the parameters that are defined in the method signature
+2. **actual parameters** - the parameters that are passed to the method when it is called
+
+**Example:**
+```Java
+public ClassName(int x, String y) {
+    this.x = x;
+    this.y = y;
+}
+```
+
+**Arguments** are the actual values that are passed to the method when it is called. Arguments are used to pass values to methods.
+
+**Example:**
+```Java
+// 5 and "Hello" are arguments
+ClassName myObject = new ClassName(5, "Hello");
+```
+
+
+### **Methods** 
+used to define the behavior of a class. They are blocks of code that perform specific tasks. Methods are defined within a class and are called on objects of that class.
+
+Methods have a **Signature** **which is the method name and the parameters that the method takes.** The signature of a method is used to identify the method and distinguish it from other methods in the program.
+
+**Example:**
+```Java
+public void printValues(arg1, arg2) {
+    x = arg1;
+    y = arg2;
+    System.out.println("x: " + x);
+    System.out.println("y: " + y);
+}
+```
+
+### System.out.println(CustomClass)
+When a class is passed to the `System.out.println()` method, the `toString()` method of the class is called. The `toString()` method is a method of the `Object` class that returns a string representation of the object.
+
+The `toString()` method can be overridden in a class to return a custom string representation of the object.
+
+**Example:**
+```Java
+System.out.println(myObject);
+// prints the string representation of the object in memory 
+// ClassName@1b6d3586
+
+// override the toString() method
+@Override
+public String toString() {
+    return "x: " + x + ", y: " + y;
+}
+
+// alterntaively the toString() method can be redifined to return a string representation of the objeect in the class definition
+
+public class House {
+    int rooms;
+    int bathrooms;
+    int floors;
+
+    public House(int rooms, int bathrooms, int floors) {
+        this.rooms = rooms;
+        this.bathrooms = bathrooms;
+        this.floors = floors;
+    }
+
+    @Override
+    public String toString() {
+        return "Rooms: " + rooms + ", Bathrooms: " + bathrooms + ", Floors: " + floors;
+    }
+}
+```
+
+### Initialize a New Object from a Class
+
+To create a new object from a class, the `new` keyword is used followed by the class name and parentheses. The parentheses are used to pass arguments to the constructor of the class.
+
+**Example:**
+```Java
+ClassName myObject = new ClassName(5, "Hello");
+```
+
+**When a new object is created from a class, the constructor of the class is called and ALL instance fields NEED to be initialized.**
+
+### Scanner Class
+
+The Scanner class is used to get user input in Java. It is a part of the java.util package.
+
+To create a new Scanner, the Scanner must be given a name specific to the program and the System.in object as an argument.
+- System.in is an object that represents the standard input stream, in this case, the console where inputs are made.
+
+The scanner class has different methods which are used for different purposes.
+
+| Method | Description |
+| --- | --- |
+| next() | Reads the next token from the input |
+| nextLine() | Reads the next line of text from the input |
+| nextInt() | Reads the next integer from the input |
+| nextDouble() | Reads the next double from the input |
+| nextBoolean() | Reads the next boolean from the input |
+| hasNext() | Returns true if there is another token in the input |
+| nextFloat() | Reads the next float from the input |
+| hasNextLine() | Returns true if there is another line of text in the input |
+| hasNextInt() | Returns true if there is another integer in the input |
+| hasNextDouble() | Returns true if there is another double in the input |
+| hasNextBoolean() | Returns true if there is another boolean in the input |
+| close() | Closes the scanner |
+
+- in this case token simply refers to keywords, identifiers, literals, and operators that are used in a program.
+
+**Example:**
+```Java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+  // Create a Scanner object
+    Scanner scanner = new Scanner(System.in);
+    // Prompt the user for input via the console
+    System.out.println("Enter your name: ");
+    // Get the user's input
+    String name = scanner.nextLine();
+    // Print a greeting to the console
+    System.out.println("Hello, " + name + "!");
+  }
+}
+```
+- The `Scanner` class is imported from the `java.util` package.
+- A `Scanner` object is created using the `new` keyword.
+    - The method of creating an object from a class is called instantiation where the class is invoked (Scanner), named (scanner), and assigned to a variable (new Scanner(System.in)).
+- The `nextLine()` method, which is part of the scanner class, is used to get the user's input.
+
+
+
+## System Class
+The `System` class in Java provides methods for getting the current date and time. The `System` class is part of the `java.lang` package, which is automatically imported into every Java program.
+
+### System Date and Time Methods
+
+
+
+## Non-Primitive Data Types (Refrence-Type Objects)
+Non-primitive data types are used to store complex data types such as arrays, classes, and interfaces. Non-primitive data types are also known as reference types because they store references to objects in memory.
+
+Non-Primitve Data Types cannot use the same methods of checking for equality, arithmetic operations, and other operations as primitive data types.
+
+These Reference Type objects use a specific set of methods to check whether they function in a way that makes sense.
+
+### Strings
+
+Strings are used to store sequences of characters. In Java, strings are objects of the `String` class, which is part of the `java.lang` package. Strings are immutable, meaning that their values cannot be changed once they are created.
+
+**Strings can be initialized in two ways:**
+```Java
+// String literal
+String myString = "Hello, World!";
+
+// String object
+String myString = new String("Hello, World!");
+```
+
+### String Concatenation
+String concatenation is the process of combining two or more strings into a single string. In Java, the `+` operator is used to concatenate strings.
+
+```Java
+String firstName = "John";
+String lastName = "Doe";
+String fullName = firstName + " " + lastName;
+System.out.println(fullName); // John Doe
+```
+### Object Methods and Properties
+**equals()** is a method used to compare the values of two objects. It returns `true` if the values are equal and `false` if they are not.
+```Java
+String str1 = "Hello";
+String str2 = "Hello";
+System.out.println(str1.equals(str2)); // true
+```
+- alternatively the `==` operator ***CAN*** be used to compare strings but ***it is not recommended*** as it compares the memory location of the strings rather than the values of the strings.
+
+

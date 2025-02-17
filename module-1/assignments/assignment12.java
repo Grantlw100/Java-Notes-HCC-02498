@@ -14,3 +14,4 @@ public class assignment12 {
 3. Create a for loop that runs 5 times
 4. Inside the for loop, print "Welcome to Java" to the console
 5. End the for loop
+*/
