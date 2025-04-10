@@ -77,3 +77,4 @@ $newTest | Out-File "$projectName\src\test\java\com\assignment\AppTest.java"
 
 Write-Output "JUnit 5 setup complete!"
 Write-Output "You can now 'cd $projectName' and run 'mvn test' to confirm."
+Write-Output "DO NOT FORGET TO REMOVE JUNIT 3 DEPENDENCIES IF THEY EXIST!"

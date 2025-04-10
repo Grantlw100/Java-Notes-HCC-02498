@@ -1,19 +1,64 @@
 # Java Programming
 ## Content
-### [**Java Basics**](#java-basics)
+[**Java Basics**](#java-basics)
+- [Running Java Programs](#running-java-programs)
 - [Hello World](#hello-world)
 - [Print Statements](#print-statements)
 - [Comments](#comments)
 - [Methods in Java](#methods-in-java)
-### [**Data Types and Syntax**](#data-types-and-syntax)
+[**Data Types and Syntax**](#data-types-and-syntax)
 - [Class](#class)
 - [Method](#method)
-- [Declaring Variables in Java](#declaring-variables-in-java)
-- [Class Syntax](#class-syntax)
+- [Primitive DataTypes](#primitive-datatypes)
+- [Reference Types / Derived Types / Objects](#reference-types--derived-types--objects)
+- [Escape Sequences](#escape-sequences)
+- [Using the Char](#using-the-char)
+- [Methods of the Character Class](#methods-of-the-character-class)
 - [Statement Terminators](#statement-terminators)
-### [**Java Variables**](#java-variables)
+- [Reserved words or Keywords](#reserved-words-or-keywords)
+[**Java Variables**](#java-variables)
 - [Variable Notation](#variable-notation)
-   
+- [Identifiers](#identifiers)
+- [Declaring Variables in Java](#declaring-variables-in-java)
+- [Declaring multiple variables within the same line](#declaring-multiple-variables-within-the-same-line)
+- [Constants in Java](#constants-in-java)
+- [Literals](#literals)
+[**Manipulating Variables**](#manipulating-variables)
+- [Arithmetic operators](#arithmetic-operators)
+- [Compound Assignment Operators](#compound-assignment-operators)
+- [Increment and Decrement Operators](#increment-and-decrement-operators)
+- [Math in Java](#math-in-java)
+- [Math class for Arithmetic Operations](#math-class-for-arithmetic-operations)
+- [Accuracy of Floating-Point Numbers](#accuracy-of-floating-point-numbers)
+- [Scientific Notation](#scientific-notation)
+- [Data Conversion](#data-conversion)
+- [Augmented Expressions](#augmented-expressions)
+[**Classes**](#classes)
+- [State and Behavior](#state-and-behavior)
+- [Class Syntax](#class-syntax)
+- [Head of a class](#head-of-a-class)
+- [Constructor](#constructor)
+- [Instance Fields](#instance-fields)
+- [Parameters && Arguments](#parameters--arguments)
+- [Methods](#methods)
+- [System.out.println(CustomClass)](#systemoutprintlncustomclass)
+- [Initialize a New Object from a Class](#initialize-a-new-object-from-a-class)
+- [Scanner Class](#scanner-class)
+[**Methods**](#methods)
+- [Method declaration](#method-declaration)
+- [Static vs Non-Static](#static-vs-non-static)
+[System Class](#system-class)
+- [System Data and Time Methods](#system-data-and-time-methods)
+[**Non-Primitive Data Types**](#non-primitive-data-types)
+- [Strings](#strings)
+- [String Concatenation](#string-concatenation)
+- [Reading a String from the Console](#reading-a-string-from-the-console)
+- [Comparing Strings](#comparing-strings)
+- [ Index of a Character in a String](#index-of-a-character-in-a-string)
+- [Convert a String to a Number](#convert-a-string-to-a-number)
+- [Format a String with printf()](#format-a-string-with-printf)
+- [Object Methods and Properties](#object-methods-and-properties)
+
 ## Java Basics 
 
 Java was developed by Sun Microsystems in 1995. It is a high-level programming language that is platform-independent, meaning that it can run on any operating system that has a Java Virtual Machine (JVM). Java is used to develop a wide variety of applications, from web applications to mobile applications to enterprise applications.
@@ -202,6 +247,48 @@ The **Newline** character `\n` is used to create a new line in a string. When it
     Hello
     World!
     ```
+
+### Using the Char
+
+**Char** or the character data type, the **unicode** or the **ASCII** value of a character can be used to represent the character.
+- **Unicode** is a universal character encoding standard that assigns a unique number to every character in every language.
+- **ASCII** is a character encoding standard that assigns a unique number to each character in the English language.
+
+The char data type can be used as a unicode or ASCII character value where the value of a capital letter can be compared to other capital letters and the value of a lowercase letter can be compared to other lowercase letters.
+
+**Example:**
+```Java
+char myChar = 'A';
+System.out.println((int) myChar); // 65
+
+char myChar = 'a';
+System.out.println((int) myChar); // 97
+
+
+if (myChar >= 'A' && myChar <= 'Z') {
+    System.out.println("The character is a capital letter.");
+} else if (myChar >= 'a' && myChar <= 'z') {
+    System.out.println("The character is a lowercase letter.");
+} else if (myChar >= '0' && myChar <= '9') {
+    System.out.println("The character is a number.");
+} else {
+    System.out.println("The character is a special character.");
+}
+```
+
+### Methods of the Character Class 
+The `Character` class in Java is a part of the `java.lang` package and provides methods for working with characters. The `Character` class is a wrapper class for the `char` primitive data type.
+
+| Method | Description | Example | Returns |
+| --- | --- | --- | --- |
+| isDigit() | Returns true if the character is a digit | Character.isDigit('5') | true |
+| isLetter() | Returns true if the character is a letter | Character.isLetter('A') | true |
+| isLetterOrDigit() | Returns true if the character is a letter or digit | Character.isLetterOrDigit('5') | true |
+| isLowerCase() | Returns true if the character is a lowercase letter | Character.isLowerCase('a') | true |
+| isUpperCase() | Returns true if the character is an uppercase letter | Character.isUpperCase('A') | true |
+| toLowerCase() | Converts the character to lowercase | Character.toLowerCase('A') | 'a' |
+| toUpperCase() | Converts the character to uppercase | Character.toUpperCase('a') | 'A' |
+
 
 ### Statement Terminators
 While it is incredibly annoying, ensure that lines are ended with a semi-colon or the program will not compile.  
@@ -659,7 +746,7 @@ myObject.x = 5;
 System.out.println(myObject.x); // 5
 ```
 
-### **Parameters && Argumetns**
+### **Parameters && Arguments**
 placeholders that are replaced by actual values when the method is called. Parameters are used to pass values to methods.  
 
 There are two types of parameters in Java: 
@@ -796,6 +883,118 @@ public class Main {
 
 
 
+## Methods
+A method is a block of code that performs a specific task. It is a set of code that is referred to by name and can be called (invoked) at any point in a program simply by utilizing the method's name. Methods are used to perform certain actions, and they are also known as functions.
+
+### Method declaration 
+
+The method declaration is similar to a function declaration or a method signature. It consists of the method name, return type, and parameters.
+```Java
+public void myMethod(int x, String y) {
+    // code to be executed
+}
+```
+
+The methods availability is determined by the **access modifier**. The access modifier specifies the level of access for the method. 
+- The `public` access modifier specifies that the method is accessible from any other class.
+- The `private` access modifier specifies that the method is only accessible within the same class.
+
+The **return type** specifies the data type of the value that the method returns. If the method does not return a value, the return type is `void`.
+- **void** is a keyword that is used to define a method that does not return a value.
+- alternatives can include:
+    - double    
+    - int
+    - String
+    - boolean
+- If the return type is not void, the method **MUST** return a value of the specified data type.
+
+**Example**
+```Java
+public String myMethod(int x, String y) {
+    // code to be executed
+    if (x > 0) {
+        return "Hello, " + y + "!";
+    } else {
+        return "Goodbye, " + y + "!";
+    }
+}
+```
+
+The method declaration also includes the method name and the parameters that the method takes. The parameters are enclosed in parentheses and separated by commas.
+- **myMethod** is the name of the method.
+
+The **Naming Conventions** for methods to use a verb which defines the action being performed by the method and should be in camelCase. 
+
+**Parameters** are added to the method with both the data type they need to be and the name of the parameter.
+- **(dataType parameter1,dataType parameter2** are space holders for the values that will be passed to the method when it is called.
+
+
+### **Static vs Non-Static**
+
+**Static** methods are associated with a class and belong to that class rather than an object. A static method can be shared among all instances of a class.  
+Static methods are declared with the static keyword. The static keyword refers to the fact that the method does not change when a new class is instantiated. The value of a static method is the same for all instances of the class.
+
+
+- **Non-Static** methods are associated with an object and belong to that object. A non-static method can only be called on an instance of a class instead of the class itself.  
+Non-static methods are declared without the static keyword. The non-static keyword refers to the fact that the method changes when a new class is instantiated. The value of a non-static method is unique to each instance of the class.
+
+**Analogy**
+> **Static as cable TV:**
+> There’s one broadcast on channel 3, and everyone sees the same content.
+> Just like a static field or method is shared by all instances, there’s one piece of data or code accessible to everyone.
+
+> **Non-static as personalized streaming (Hulu):**
+> Each person chooses their own show independently, and each stream is unique to their account.
+> Just like an instance field or method, each object has its own state, and they can do things independently of other objects.
+
+### Calling Methods
+
+When a non-static method is added to a class, it becomes available to use on an object of that class. In order for methods to be executed, they must be called on an object of the class.
+
+This refers to create a new object from the class. When that object is created it automatically has access to the methods defined for the defualt or unalterd class.
+
+**Example:**
+```Java
+// Defining the Class Method 
+public class ClassName {
+    // instance fields 
+    String name;
+
+    // constructor method 
+    public ClassName(String name) {
+        this.name = name;
+    }
+
+    // instance method
+    public void myMethod() {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+**Example Usage**
+```Java
+// Creating a new object from the class
+ClassName myObject = new ClassName("Grant");
+
+// Calling the method on the object
+myObject.myMethod();
+
+// prints hello world to the console
+```
+
+### Adding Parameters to Methods
+
+
+
+## Scope 
+
+Scope defines where variables, methods, and classes are accessible in a program. The scope of a variable, method, or class is determined by where it is declared.
+
+- **Class Scope** - Variables, methods, and classes that are declared at the class level are accessible throughout the class.
+- **Method Scope** - Variables that are declared within a method are only accessible within that method.
+- **Block Scope** - Variables that are declared within a block of code (e.g., within curly braces) are only accessible within that block.
+
 ## System Class
 The `System` class in Java provides methods for getting the current date and time. The `System` class is part of the `java.lang` package, which is automatically imported into every Java program.
 
@@ -803,7 +1002,7 @@ The `System` class in Java provides methods for getting the current date and tim
 
 
 
-## Non-Primitive Data Types (Refrence-Type Objects)
+## Non-Primitive Data Types
 Non-primitive data types are used to store complex data types such as arrays, classes, and interfaces. Non-primitive data types are also known as reference types because they store references to objects in memory.
 
 Non-Primitve Data Types cannot use the same methods of checking for equality, arithmetic operations, and other operations as primitive data types.
@@ -832,6 +1031,119 @@ String lastName = "Doe";
 String fullName = firstName + " " + lastName;
 System.out.println(fullName); // John Doe
 ```
+
+### Reading a String from the Console
+
+The `Scanner` class in Java is used to get user input. 
+
+The `nextLine()` method of the `Scanner` class is used to read a string from the console. A string is defined as a sequence of characters separated by a newline character.
+
+```Java
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter a string of text: ");
+String myString = scanner.nextLine();
+$ My name is Grant
+System.out.println(myString); // My name is Grant
+// collects the entire line of text regardless of white space
+```
+
+The `next()` method of the `Scanner` class is used to read a single word from the console. A word is defined as a sequence of characters separated by whitespace.
+
+```Java
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter a word: ");
+String myWord = scanner.next();
+$ Hello, these are words
+System.out.println(myWord); // Hello,
+// leaves off anythong following the first whitespace
+```
+
+### Comparing Strings 
+
+Strings can be compared using multiple string methods. 
+
+| Method | Description | Example | Returns |
+| --- | --- | --- | --- |
+| equals() | Compares the values of two strings | str1.equals(str2) | true |
+| equalsIgnoreCase() | Compares the values of two strings, ignoring case | str1.equalsIgnoreCase(str2) | true |
+| compareTo() | Compares two strings lexicographically | str1.compareTo(str2) | 0 if equal, -1 if less than, 1 if greater than |
+| compareToIgnoreCase() | Compares two strings lexicographically, ignoring case | str1.compareToIgnoreCase(str2) | 0 if equal, -1 if less than, 1 if greater than |
+| startsWith() | Checks if a string starts with a specified prefix | str1.startsWith("Hello") | true |
+| endsWith() | Checks if a string ends with a specified suffix | str1.endsWith("World!") | true |
+| contains() | Checks if a string contains a specified sequence of characters | str1.contains("World") | true |
+
+### Index of a Character in a String
+
+There are multiple methods that can be used to find the index of a character in a string.
+
+In any of these methods, a string `s` or character `c` is passed as an argument to the method. 
+- The method will return the index of the first occurrence of the string or character in the string. 
+- The second argument that can be used is the index `fromIndex` which specifies the index at which the search should begin.
+    - the second argument can always be left off
+
+**Example:** 
+```Java
+String str = "Hello, World!";
+String str2 = "World";
+
+str.indexOf('H'); // 0
+str.indexOf('L', 4); // 9
+str.lastIndexOf('l'); // 10
+str.indexOf(str2); // 7
+```
+
+
+| Method | Description | Example | Returns |
+| --- | --- | --- | --- |
+| indexOf() | Returns the index of the first occurrence of a character or string | str.indexOf('H') | 0 |
+| lastIndexOf() | Returns the index of the last occurrence of a character or string | str.lastIndexOf('l') | 2 |
+| indexOf() | Returns the index of the first occurrence of a character or string starting from a specified index | str.indexOf('L', 4) | 9 |
+
+### Convert a String to a Number 
+
+The `Integer` class in Java provides methods for converting strings to integers. The `Integer` class is part of the `java.lang` package, which is automatically imported into every Java program.
+
+The `parseInt()` method of the `Integer` class is used to convert a string to an integer. The `parseInt()` method takes a string as an argument and returns an integer.
+
+The `parseDouble()` method of the `Double` class is used to convert a string to a double. The `parseDouble()` method takes a string as an argument and returns a double.
+
+**Example:**
+```Java
+String str = "123";
+int num = Integer.parseInt(str);
+
+String str2 = "3.14";
+double pi = Double.parseDouble(str2);
+```
+
+### Format a String with printf()
+
+`printf()` is a method of the `PrintStream` class that is used to format a string. The `printf()` method takes a format string and a list of arguments and returns a formatted string.
+
+To use the format String class, simply start by using the `%` symbol followed by a letter that represents the data type of the value that will be passed to the method. 
+
+For each formatted item in the string, a comma is used to separate the values that will be passed to the method.
+
+| Format Specifier | Description | Example |  Output |
+| --- | --- | --- |
+| %s | String | printf("Hello", %s) | "Hello |
+| %d | Integer | printf(5, %d) | 5 |
+| %f | Float | printf(5.0, %f) | 5.0 |
+| %c | Character | printf('A', %c) | A |    
+| %b | Boolean | printf(true, %b) | true |
+| %e | Scientific Notation | printf(5.0, %e) | 5.0e+00 |
+| %x | Hexadecimal | printf(255, %x) | ff |
+
+**Example:**
+```Java
+String name = "John";
+int age = 25;
+double height = 5.9;
+
+System.out.printf("Name: %s, Age: %d, Height: %.2f", name, age, height);
+// Name: John, Age: 25, Height: 5.90
+```
+
 ### Object Methods and Properties
 **equals()** is a method used to compare the values of two objects. It returns `true` if the values are equal and `false` if they are not.
 ```Java

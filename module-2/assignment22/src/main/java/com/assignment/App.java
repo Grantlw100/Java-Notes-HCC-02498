@@ -1,9 +1,6 @@
 package com.assignment;
 import java.util.Scanner;
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static double subtotal(double subtotal,double gratuityRate) {

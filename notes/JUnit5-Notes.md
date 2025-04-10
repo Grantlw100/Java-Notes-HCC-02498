@@ -38,7 +38,35 @@ Not all annotations are written into this markdown file. There is a decently lar
     - test factory methods are used to generate dynamic tests. 
     - dynamic tests are useful for writing tests in a more concise and expressive way.
 
-### Writing Tests
+### Parameterized Tests
+Using the `@ParameterizedTest` annotation, we can create a parameterized test that will run the same test multiple times with different arguments. 
+
+```Java
+@ParameterizedTest
+@CsvSource({
+    "0, 32",
+    "100, 212",
+    "-40, -40",
+    "37, 98.6"
+})
+void testConvertCelsiusToFahrenheit(int celsius, double expectedFahrenheit) {
+    double actualFahrenheit = Main.convertCelsiusToFahrenheit(celsius);
+    assertEquals(expectedFahrenheit, actualFahrenheit, 0.0001);
+}
+```
+In this snippet:
+- `@ParameterizedTest` denotes that the method is a parameterized test method.
+- `@CsvSource` provides the arguments for the test method.
+    - CSV source is a way to provide arguments to a parameterized test method.
+    - the arguments are provided as a comma-separated list of values.
+- `void testConvertCelsiusToFahrenheit(int celsius, double expectedFahrenheit)` is the test method that will be run multiple times with different arguments.
+    - this test uses the function from the Application code to convert celsius to fahrenheit.
+    - the expected fahrenheit value is provided as an argument to the test method.
+- `assertEquals(expectedFahrenheit, actualFahrenheit, 0.0001)` is used to assert that the actual fahrenheit value is equal to the expected fahrenheit value.
+    - the third argument is the delta value which is used to compare floating-point numbers.
+    - Delta refers to the difference between the expected and actual values that is allowed for the test to pass.
+
+**Run the test** Using `mvn test` will run the test and output the results to the console.
 
 
 ## Console Launcher 
