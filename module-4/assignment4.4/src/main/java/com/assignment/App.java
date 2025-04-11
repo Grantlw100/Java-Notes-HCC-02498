@@ -33,15 +33,15 @@ public class App
         }
 
         while (!roundValidInput) {
-            System.out.println("How many decimal places would you like in your answe?");
-            if (scanner.hasNextInt()) {
-            roundTo = scanner.nextInt();
-            roundValidInput = true;
-        } else {
-            System.out.println("Please enter a valid number.");
-            scanner.next(); // Clear the invalid input
+                System.out.println("How many decimal places would you like in your answe?");
+                if (scanner.hasNextInt()) {
+                roundTo = scanner.nextInt();
+                roundValidInput = true;
+            } else {
+                System.out.println("Please enter a valid number.");
+                scanner.next(); // Clear the invalid input
+            }
         }
-    }
         
         System.out.println("Please enter the units associated with the length of the side.");
         units = scanner.next();

@@ -58,6 +58,7 @@
 - [Convert a String to a Number](#convert-a-string-to-a-number)
 - [Format a String with printf()](#format-a-string-with-printf)
 - [Object Methods and Properties](#object-methods-and-properties)
+[**Scanner](#scanner)
 
 ## Java Basics 
 
@@ -1154,3 +1155,7 @@ System.out.println(str1.equals(str2)); // true
 - alternatively the `==` operator ***CAN*** be used to compare strings but ***it is not recommended*** as it compares the memory location of the strings rather than the values of the strings.
 
 
+### Scanner Class
+The `Scanner` class in Java is used to get user input. It is a part of the `java.util` package. The `Scanner` class provides methods for reading different types of data from the console, such as strings, integers, and doubles.
+
+Creating an Enumerator field for a console application in Java

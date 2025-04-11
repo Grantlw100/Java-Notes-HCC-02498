@@ -1,31 +1,3 @@
-// package com.assignment;
-// import java.util.Scanner;
-
-// /**
-//  * Hello world!
-//  *
-//  */
-// public class Test 
-// {
-//     public static void main( String[] args )
-//     {
-
-
-//         int y = 0;
-//         for ( int i =0; i < 10; i++){
-//             y+=i;
-//         }
-
-//         System.out.println(y);
-
-// // int sum = 0;
-
-// //         for (int i =0; i <= 10; i++){
-// //                 Scanner input = new Scanner(System.in);
-// //                 sum += input.nextInt();
-// //         }
-//     }
-// }
 
 package com.assignment;
 import java.math.*;
@@ -97,15 +69,3 @@ public class App
     }
 
 }
-
-        // double inValue;
-        // double outValue = 0;
-        // int roundAt = 0;
-        // String inUnit = "";
-        // String outUnit = "";
-        // String tableHeader = "";
-        // String outputString = "";
-        // double outputRatio= 0;
-        // boolean validInput = false;
-        // double kmToMiRatio = 0.621371;
-        // double miToKmRatio = 1.609344 ;

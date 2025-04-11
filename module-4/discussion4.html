@@ -1,0 +1,69 @@
+<h1><strong>Discussion Board IV</strong></h1>
+
+<h2><strong>Core Concepts of Computer Science</strong></h2>
+
+
+<h3><strong>Polymorphism</strong></h3>
+<p>
+    Polymorphism is the fluidity of an objects state and how it can be manipulated into different forms. Polymorphism descrices the way in which objects (object oriented programming) can mutate so they can into the right place. For example, implicit conversion between the integer data type and the double data type if and when an integer value is used in place of a double. 
+</p>
+
+<h3><strong>Encapsulation</strong></h3>
+<p>
+    Encapulation refers to the ability data and methods use to wrap themselves into a single entity for efficiency. Encapsulation makes Programming easier and more readable. Storing a method and all of its relevant data within a class and simply callling the class reduces the amount of soource code in one place. Importing code by including it at the top of the file allows that code to be used and shared amongst other files but with encapsulation, a utility or method can be used over and over and over again or called once within the main entry point and used whereever it is needed from a cache. 
+</p>
+
+<h3><strong>Inheritance</strong></h3>
+<p>
+    Inheritance refers to the ability for components to reach up or reach down to lower or higher nested components to make data or functions available where they are need. Inheritance simplifies having to import data over and over and over again by making in publicly available everywhere or privately available to a select few safeguarded components that are interconnected by their lineage. The parent can pass data down to the child and the child can sometimes send data back up to the parent. 
+</p>
+
+<h3><strong>Abstraction0</strong></h3>
+<p>
+    Abstraction refers to the use of encapsulation, inheritance, and polymorphism to hide, change, and manipulate data so only what is necessary is visible at that time of use. The definition of Abstraction is "the quality of dealing with ideas rather than events." In the context of Computer Science, rather than dealing with the entire program (event), we will deal with only the idea that funnels into the program like a class or even just a method within the class rather the entire entity.  
+</p>
+
+<h2><strong>Grasp vs Solid Design Principles</strong></h2>
+
+<h3><strong>GRASP Principles</strong></h3>
+<p>
+    Grasp Principles aim to simplify and keep code minimal and modular for changes in the future. The Grasp principles encapsulate data and methods while aiming to centralize logic to specific pathways. Key elements are created for specific sets of data. If data needs to be added Polymorphism and Indirection would ensure an intermediary is capable of handling and processing data as it comes in from different endpoints. Alternatively, Pure Fabrication would demand the creation of a single end point or module for all data to be processed through. The able to create a simple intermediary module to handle the data would be simpler and faster than creating an entire new class.
+
+    <ul>
+        <li>Information Expert - a singular class should be the epicenter of processing a collection of data.</li>
+        <li>Creator - an object should belong to a singular class not multiple </li>
+        <li>Controller - assign an intermediater to control data flow from one class to another.</li>
+        <li>Low Coupling - minimize dependencies between classes to reduce the impact if one changes.</li>
+        <li>High Cohesion - keep methods and data encapsulated together if they have similar responsibilites.</li>
+        <li>Polymorphism - use polymorphism to assign a class or module to control changing data within a certain scope</li>
+        <li>Pure Fabrication - create modules or methods to encapsulate the handling of out of place operations.</li>
+        <li>Indirection - use an intermediary to decouple one class from many. </li>
+        <li>Protected Variations - code should be designed so it does not fail if other things change.</li>
+    </ul>
+</p>
+
+<h3><strong>SOLID Principles</strong></h3>
+<p>
+    The solid principles focus heavily on the core concepts encapsulation and abstraction. The guidelines themselves determine that everything must be as small and immutable as possible. That anywhere a classes subclasses exist their children must be capable of doing everything the parent element is designed to do. The Interface segregation concept you uses components rather than entire data sets to simplify the process of inputting data. Dependency Inversion and open-closed would require creating a program where high level modules do not rely on low level modules. If a high level module was not capable of extending to include a subclass because of a single object, a new Superclass would need to be created capable of processing that data. The Single Responsibility Principle supports this method of system alterations. 
+    <ul>
+        <li>Single-Responsinlity - one class should have one and only one responsibity.</li>
+        <li>Open-Closed - Every entity should be open for extension but closed for modification.</li>
+        <li>Liskov Substitution - objects of a superclass should be replaced with objects of a subclass.</li>
+        <li>Interface Segregation - Clients should not be foreced to depend on interfaces they do not use.</li>
+        <li>Dependency Inversion - High level modules should not depend on low level modules.</li>
+    </ul>
+</p>
+
+<h2><strong>Comparing and Contrasting SOLID and Grasp Principles</strong></h2>
+
+<p>
+    Both sets of principles attempt to improve the readibility of the logic using encaspulation and abstraction. The SOLID Principles aim to centralize logic to specific endpoints. The Principles seperate tasks to minimze discrepancies for where data or methods belong. Many of the Grasp Principles aim to achieve a similar environment as SOLID Principles but the Grasp Principles keep capable of handling dynamic additions and alterations. Code should be designed with scalability in mind. As new technologies grow and develop, new methods of processing data and syntax changes will need to be carried out throughout the code. Giving every single class a single responsibility could require rewriting every file within a program. Creating code that is modular and capable of handling additions in the future is key in development. Where SOLID Principles would extend a method to incorporate data from an endpoint, an intermediary class could be used with Grasp Principles to ensure proper delivery and processing of niche data. Both Principles would also create a new Superclass to handle this data. SOLID Principles Single Responsibility Principle would ensure all subclasses from the Superclass can be used where the Superclass can be used but Grasp Principles may use Indirection and Polymorhism to handle chaing data across Superclasses with similar data sets. In conclusion, both sets of Principles have methods of dictating the responsibilities and limitations of classes. A combination of both sets of Principles should be used when additions to code are made and decisions on the structure of new code should function with the existing system in mind. 
+</p>
+
+<h2><strong>Citations</strong></h2>
+<p>
+    Olawanletjoel, J. (2024, November 7). SOLID principles for programming and software design. freeCodeCamp.org. https://www.freecodecamp.org/news/solid-principles-for-programming-and-software-design/ 
+</p>
+<p>
+    PolishChuck, A. (n.d.). Grasp принципы — bool.dev. Bool.dev. https://bool.dev/blog/detail/grasp-printsipy 
+</p>
