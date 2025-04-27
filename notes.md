@@ -1159,3 +1159,45 @@ System.out.println(str1.equals(str2)); // true
 The `Scanner` class in Java is used to get user input. It is a part of the `java.util` package. The `Scanner` class provides methods for reading different types of data from the console, such as strings, integers, and doubles.
 
 Creating an Enumerator field for a console application in Java
+
+## Object Data Types
+Object data types are used to store objects in Java. Object data types are also known as reference types because they store references to objects in memory. Object data types can be used to store any type of object, including primitive data types, strings, arrays, and classes.
+
+### Using the object data type
+
+(Object[]) → (desiredType)
+```Java
+Object[] myArray = new Object[5];
+myArray[0] = 5; // Integer
+myArray[1] = 5.0; // Double
+myArray[2] = "Hello"; // String
+myArray[3] = true; // Boolean
+myArray[4] = new Car("red", 25); // Object
+```
+
+## Two Dimensional Arrays
+**Two-Dimensional-Arrays** use an x and y axis to create a data field for values associated with an array. 
+
+### Two dimensional array declarations
+``` java 
+// Declare array ref var
+dataType [][] refVar;
+
+// Create array and assign its reference to variable 
+refVar = new dataType[10][10];
+
+// Combine declaration and creation in one step
+dataType[][] refVar = new dataType[10][10];
+
+//Alternatively
+dataType refVar[][] = new dataType[10][10];
+```
+
+### Review 7
+
+Question 1. The JVM stores the array in an area of memory, called _,which is used for dynamic memory allocation where blocks of memory are allocated and freed in an arbitrary order.
+
+The JVM stores arrays in an area of memory called the heap, which is used for dynamic memory allocation, where blocks of memory can be allocated and freed in an arbitrary order. The heap is a region of memory where objects and arrays, including those in Java, are created and stored during program execution
+
+Question 2. Assume int[] scores = {1, 20, 30, 40, 50], what value does java.util.Arrays.binarySearch(scores, 3) return?
+
