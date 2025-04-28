@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: assignment5_4.DistanceTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.200 s -- in assignment5_4.DistanceTest
